@@ -1,0 +1,29 @@
+item {
+  id: 1
+  name: 'sofa'
+}
+
+item {
+  id: 2
+  name: 'table'
+}
+
+item {
+  id: 3
+  name: 'chair'
+}
+
+item {
+  id: 4
+  name: 'fan'
+}
+
+item {
+  id: 5
+  name: 'stairway'
+}
+
+item {
+  id: 6
+  name: 'refrigerator'
+}
