@@ -1,0 +1,45 @@
+item {
+  name: "/m/02crq1"
+  id: 1
+  display_name: "sofa"
+}
+item {
+  name: "/m/01mzpv"
+  id: 2
+  display_name: "chair"
+}
+item {
+  name: "/m/04bcr3"
+  id: 3
+  display_name: "table"
+}
+item {
+  name: "/m/040b_t"
+  id: 4
+  display_name: "refrigerator"
+}
+item {
+  name: "/m/03ssj5"
+  id: 5
+  display_name: "bed"
+}
+item {
+  name: "/m/07c52"
+  id: 6
+  display_name: "tv"
+}
+item {
+  name: "/m/0cvnqh"
+  id: 7
+  display_name: "bench"
+}
+item {
+  name: "/m/0bt9lr"
+  id: 8
+  display_name: "dog"
+}
+item {
+  name: "/m/0199g"
+  id: 9
+  display_name: "bicycle"
+}
