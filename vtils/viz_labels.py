@@ -22,6 +22,10 @@ def filter_labels(boxes, scores, classes):
 def convert_labels(squeeze_boxes, squeeze_classes, squeeze_scores, w, h):
     list_labels_class = list(labels_class)
     result = []
+    a=0
+    b=0
+    c=0
+    d=0
     for index, i in enumerate(squeeze_scores, 0):
         if i > 0.6:
             (x_top_left, x_btm_right, y_top_left, y_btm_right) = (
@@ -38,8 +42,8 @@ def convert_labels(squeeze_boxes, squeeze_classes, squeeze_scores, w, h):
             name = labels_name[list_labels_class.index(squeeze_classes[index])]
             result.append({
                 "name": name,
-                "w": h_box,
-                "h": w_box,
+                "w": w_box,
+                "h": h_box,
                 "x_top_left": x_top_left,
                 "y_top_left": y_top_left,
                 "x_btm_right": x_btm_right,
@@ -49,8 +53,18 @@ def convert_labels(squeeze_boxes, squeeze_classes, squeeze_scores, w, h):
                 "x_btm_left": x_btm_left,
                 "y_btm_left": y_btm_left
             })
-    return result
+    return (result, w,h)
 
 def calculate_focus(data_deteced):
-    return 'kuy'
+    # w=640
+    # h=400
+    data = ""
+
+    for box in data_deteced:
+        if box['x_btm_right'] - 120 > 100 and box['y_btm_left'] > 120 and box['w'] > 100 and box['h'] > 100:
+            data += str(box['name']) + " "
+        elif 520 - box['x_btm_left'] > 100 and box['y_btm_right'] > 120 and box['w'] > 100 and box['h'] > 100:
+            data += str(box['name']) + " "
+    
+    return "!!!CAREFUL : " + data
   
